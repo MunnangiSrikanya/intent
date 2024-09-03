@@ -1,0 +1,23 @@
+ useEffect(() => {
+    const fetchFileTypes = async () => {
+      try {
+        const resp = await PCore.getDataApiUtils().getData(
+          'D_AccountCaseTypes',
+          '{"dataViewParameters":{"ResourceID":"b7c2bdf4-3031-4b3d-ad35-135030a4fb33","IsActive":"true"}}',
+          'app/polaris-ec'
+        );
+        console.log(resp.data);
+        if (resp) {
+          console.log(
+            resp.data.data.map(item => item?.CaseTypeDesc),
+            resp
+          );
+          setFileTypes(resp.data.data.map(item => item?.CaseTypeDesc));
+        }
+      } catch (error) {
+        console.error('Error fetching file types:', error);
+      }
+    };
+
+    fetchFileTypes();
+  }, []);
