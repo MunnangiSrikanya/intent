@@ -59,6 +59,8 @@ useEffect(() => {
   
   {alignment === 'tableView' && (
           <>
+                        <ButtonGroupComponent setPageCard={setPageCard} setPageTable={setPageTable} alignment={alignment} setAlignment={setAlignment} />
+
             <div className='ag-theme-alpine table-view'>
               <AgGridReact ref={gridRef} rowData={currentPageRowsTable} columnDefs={getColumns()} pagination={false} domLayout='autoHeight' />
             </div>
@@ -68,7 +70,20 @@ useEffect(() => {
 
         {alignment === 'gridView' && (
           <>
-            <ProcessFlow />
+            <Accordion defaultExpanded>
+              <AccordionSummary
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+                sx={{ display: 'flex', justifyContent: 'flex-start' ,alignItems:'center' }}
+              >
+                <h2 className='reasearch-filters'><ExpandMore fontSize="large" sx={{ marginRight: 1 }} /></h2>
+                <h2 className='reasearch-filters'>Research Filters</h2>
+              </AccordionSummary>
+              <AccordionDetails>
+                <img src={ResearchFilter} alt="Research Filter" width="100%" height="auto" />
+              </AccordionDetails>
+            </Accordion>
+            <ButtonGroupComponent setPageCard={setPageCard} setPageTable={setPageTable} alignment={alignment} setAlignment={setAlignment} />
             {currentPageRowsCard.map(item => (
               <Card key={item.pyID} className='grid-view'>
                 <div className='card-display'>
