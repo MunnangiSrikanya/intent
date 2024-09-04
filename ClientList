@@ -1,0 +1,263 @@
+const clientList = {
+    "fetchDateTime": "2024-08-29T11:23:19.147Z",
+    "pxObjClass": "Pega-API-DataExploration-Data",
+    "pageNumber": 1,
+    "data": [
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "f9d2028e-1e37-43f1-bc82-387fdf770fcc",
+        "AccountName": "AN 0518"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b5b2106d-5046-4372-ae34-409a90567aa1",
+        "AccountName": "Abandon Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b7c2bdf4-3031-4b3d-ad35-135030a4fb33",
+        "AccountName": "Abandonment Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b7bfe5a8-951a-40a8-addc-f5989769f9bb",
+        "AccountName": "Abaringe Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b43a4b4e-d258-4889-b072-f38379e4c234",
+        "AccountName": "Abasement Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b7e23b8b-3712-4602-8446-545b5a6f0632",
+        "AccountName": "Abbey Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b56f282d-dc30-44ad-88ce-632a55156a9a",
+        "AccountName": "Abbot Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b429832b-e6ea-41c9-a6f7-6817955fa861",
+        "AccountName": "Abbreviation Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b7bc467b-65e3-4cbf-bb7d-720d83dff9dd",
+        "AccountName": "Abdomen Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b6b300b3-df1f-4e9b-b053-71bd0faaa3e8",
+        "AccountName": "Abduction Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b6a616a5-ef51-4e41-85bf-8ef9731a4d10",
+        "AccountName": "Aberration Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b401bd1c-fe78-4a9b-bf28-9d1f0e337aad",
+        "AccountName": "Abeyance Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b66eab90-3827-49dc-8be2-641102926405",
+        "AccountName": "Ability Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b4d86ecd-cfbb-4556-b928-f08f62e236b2",
+        "AccountName": "Abjection Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b66e311c-6085-4d0b-a646-62434e2124e7",
+        "AccountName": "Ablation Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b66d7338-1e8a-4cda-ac41-e5cd3e91ad38",
+        "AccountName": "Abode Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "bbc57ac7-b823-4576-a4ac-d7d64c136fbb",
+        "AccountName": "Abolition Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b974b48c-3326-4091-a620-3fc88648b5d3",
+        "AccountName": "Abolitionist Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b819016a-fcd9-4743-a979-82e2a94ea60c",
+        "AccountName": "Aborigine Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b80f3863-6d5b-4bf4-b544-6db136dc59cb",
+        "AccountName": "Abortion Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "bbbc74f3-f9d3-4472-97ee-3d4a39658eec",
+        "AccountName": "Abreaction Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "bba1db0e-16fd-47fd-9822-1935248d4233",
+        "AccountName": "Abridgment Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b92b5ba6-19ca-4ea0-8c4e-edf0a1f5416c",
+        "AccountName": "Abscissa Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "ba80bceb-0c02-4ceb-839c-97672c896c2f",
+        "AccountName": "Absence Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "bca91dfa-db27-480e-a162-c51b72baece5",
+        "AccountName": "Absentee Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "ba25c153-c593-4e06-a8c3-1ae4e2015d4d",
+        "AccountName": "Absenteeism Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "ba0eeed1-fee3-48f2-b670-d8730afc134e",
+        "AccountName": "Absentia Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "bb46cc2f-a42d-40c4-898d-27ff2e619ef6",
+        "AccountName": "Absinthe Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "bb38dbad-9450-451f-8df0-ede0d814fb7d",
+        "AccountName": "Absolute Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b88512ba-91ce-4598-b57f-83128eedcc72",
+        "AccountName": "Absolution Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "bca152dd-d667-4377-9283-60c85e9180b0",
+        "AccountName": "Absorbed Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "bb2bf5c1-55d5-42fd-86e6-8132d57d52f9",
+        "AccountName": "Absorbency Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b9b508c7-98f1-4244-ad5a-6d80ac370754",
+        "AccountName": "Absorber Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "bc56d74f-d892-4288-a4a6-3d690a66fb24",
+        "AccountName": "Absorbing Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b9a3b1db-8378-4351-b50b-b87c03a2f636",
+        "AccountName": "Absorption Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "bc0f23a6-6850-4d33-adf7-dcbf2504134b",
+        "AccountName": "Abstention Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "bbed9256-c26b-4b99-9ba3-9ff81773412f",
+        "AccountName": "Abstinence Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b9969360-6d42-4abf-b151-8bd7235a791f",
+        "AccountName": "Abstract Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "b839bafb-1b53-40cf-9e2a-4800d2a3ef6f",
+        "AccountName": "Abstracted Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "ae3b757b-61b1-44d6-afaa-d977201e1041",
+        "AccountName": "Abstraction Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "aadde06b-ba77-49b5-9a00-0c29953a498b",
+        "AccountName": "Abstractionism Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "abd47fe6-817a-41ca-a56a-855a3854f148",
+        "AccountName": "Absurd Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "aec39ad4-2cb6-48ab-8329-fe3050d70866",
+        "AccountName": "Absurdity Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "ab78dc7c-e82b-49c3-873c-ab37720f5b55",
+        "AccountName": "Abundance Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "ae9daf94-7ea1-4dc4-97b3-67c14b79d629",
+        "AccountName": "Abundant Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "ad8784a4-e516-4477-8867-38a605fb3bfc",
+        "AccountName": "Abuse Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "ad7b220f-6b4a-4c1c-ab50-24ff431b9779",
+        "AccountName": "Abusive Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "ab74c353-f714-4331-a175-7f7b313379e0",
+        "AccountName": "Abysmal Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "ab6da692-d08e-4cc8-ab83-1d8d432dca28",
+        "AccountName": "Acacia Acct"
+      },
+      {
+        "pxObjClass": "ESI-Data-CAE-Account",
+        "ResourceID": "ae8106e0-4fc6-42e9-93f8-49206001c9a8",
+        "AccountName": "Academeh Acct"
+      }
+    ],
+    "queryStats": {
+      "pxObjClass": "Embed-DataExploration-QueryStats",
+      "sourceType": "RDBMS",
+      "sourceExecutionTime": "56.47 ms"
+    },
+    "pageSize": 50
+  }
