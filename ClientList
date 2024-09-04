@@ -261,3 +261,22 @@ const clientList = {
     },
     "pageSize": 50
   }
+
+
+ <Autocomplete
+                value={selectedClientName}
+                onChange={handleClientNameChange}
+                options={clientList?.data || []}
+                getOptionLabel={(option) => option.AccountName}
+                renderInput={(params) => (
+                  <TextField
+                    {...params}
+                    label="Client Name"
+                    margin="normal"
+                    required
+                    variant="outlined"
+                    size="small"
+                    className="text-field"
+                  />
+                )}
+              />
