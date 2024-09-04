@@ -1,0 +1,9 @@
+{selectedFileType === 'Additional Medicare Intent' ? (
+            <AdditionalMedicare />
+          ) : selectedFileType === 'CMS BID' ? (
+            <CmsBid />
+          ) : selectedFileType === 'Clinical Supplements' ? (
+            <ClinicalSupplement />
+          ) : (
+            ''
+          )}
