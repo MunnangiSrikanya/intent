@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent } from 'react';
 import { Button, Card, Dialog, DialogActions, DialogContent, DialogTitle, IconButton, TextField, Typography } from '@material-ui/core';
 import { useDropzone, DropzoneInputProps, DropzoneRootProps } from 'react-dropzone';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
@@ -64,6 +64,10 @@ const FileUploadComponent: React.FC<FileUploadComponentProps> = ({ text }) => {
     marginLeft: '1rem'
   };
 
+  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.files);
+  };
+
   return (
     <div>
       <div style={{ marginBottom: '1rem' }}>
@@ -72,11 +76,13 @@ const FileUploadComponent: React.FC<FileUploadComponentProps> = ({ text }) => {
         </Button>
         <TextField label={text} variant='filled' disabled style={{ width: '50%' }} size='small' />
       </div>
-    
+
       <Dialog
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={attachmentClick}
+        maxWidth='xs'
+        fullWidth
         BackdropProps={{
           style: {
             backgroundColor: 'transparent',
@@ -97,11 +103,22 @@ const FileUploadComponent: React.FC<FileUploadComponentProps> = ({ text }) => {
               {!isDragActive ? 'Drag and drop files here' : 'Drop files here'}
             </div>
           </div>
-          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.7rem', marginTop: '0.5rem' }}>
+          <h6 style={{ display: 'flex', justifyContent: 'center' }}>OR</h6>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <input
+              type="file"
+              id="files"
+              accept=".xlsx"
+              style={{ fontFamily: "var(--fontfamily)" }}
+              onChange={handleFileChange}
+            />
+          </div>
+          {/* <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.7rem', marginTop: '0.5rem' }}>
             <p style={{ margin: 0 }}>Files supported: CSV, XLSX, XLS</p>
             <p style={{ margin: 0 }}>Maximum size: 20MB</p>
-          </div>
+          </div> */}
           {uploadedFiles.length !== 0 && <b><p>Uploaded files</p></b>}
+
           {uploadedFiles.map((file) => (
             <Card key={file.name} style={{ padding: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <p style={{ margin: 0, display: 'flex', alignItems: 'center' }}>
@@ -122,6 +139,6 @@ const FileUploadComponent: React.FC<FileUploadComponentProps> = ({ text }) => {
       </Dialog>
     </div>
   );
-}
+};
 
 export default FileUploadComponent;
