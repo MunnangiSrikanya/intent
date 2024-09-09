@@ -1,0 +1,70 @@
+interface FileData {
+  name: string;
+  size: number;
+  type: string;
+}
+
+interface OpenMessage {
+  open: boolean;
+  vertical: 'top' | 'bottom';
+  horizontal: 'left' | 'right';
+  severity: 'success' | 'error' | 'info' | 'warning';
+  msg: string;
+}
+
+interface RowData {
+  Filename: string;
+  Format: string;
+  Size: string;
+  Attachment: string;
+}
+
+const [openFileDialog, setOpenFileDialog] = useState<boolean>(false);
+  const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
+  const [openMessage, setOpenMessage] = useState<OpenMessage>({
+    open: false,
+    vertical: 'top',
+    horizontal: 'right',
+    severity: 'success',
+    msg: ''
+  });
+  const [rowData, setRowData] = useState<RowData[]>([]);
+  const [files, setFiles] = useState<File[]>([]);
+
+  const handleClose = () => {
+    setOpenFileDialog(false);
+    setUploadedFiles([]);
+  };
+
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    accept: '.csv, .xlsx, .xls',
+    maxSize: 20 * 1024 * 1024,
+    onDrop: (files: File[]) => {
+      setUploadedFiles(files);
+    }
+  } as DropzoneOptions);
+
+  const handleUpload = () => {
+    console.log(uploadedFiles);
+    if (uploadedFiles.length > 0) {
+      setFiles(uploadedFiles);
+      setRowData([
+        ...rowData,
+        {
+          Filename: (uploadedFiles[0]?.name).substring(0, (uploadedFiles[0]?.name).indexOf('.')),
+          Format: (uploadedFiles[0]?.name).substring((uploadedFiles[0]?.name).indexOf('.')),
+          Size: `File Size ${uploadedFiles[0]?.size}`,
+          Attachment: 'Uploaded Successfully'
+        }
+      ]);
+      setOpenFileDialog(false);
+      setUploadedFiles([]);
+      setOpenMessage({ ...openMessage, open: true, msg: 'File Uploaded Successfully!!' });
+    }
+  };
+
+  const uploadButtonStyle = {
+    backgroundColor: uploadedFiles.length > 0 ? '#035C67' : '',
+    color: uploadedFiles.length > 0 ? 'white' : 'black',
+    marginLeft: '1rem'
+  };
