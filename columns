@@ -1,0 +1,12 @@
+interface Column {
+  headerName: string;
+  field: string;
+}
+
+// Create an array of columns with the Column type
+const columns: Column[] = [
+  { headerName: 'Filename', field: 'Filename' },
+  { headerName: 'Format', field: 'Format' },
+  { headerName: 'Size', field: 'Size' },
+  { headerName: 'Attachment', field: 'Attachment' }
+];
