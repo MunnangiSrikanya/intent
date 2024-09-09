@@ -10,3 +10,18 @@ const columns: Column[] = [
   { headerName: 'Size', field: 'Size' },
   { headerName: 'Attachment', field: 'Attachment' }
 ];
+
+interface RowData {
+  Filename: string;
+  Format: string;
+  Size: string;
+  Attachment: string;
+}
+const [rowData, setRowData] = useState<RowData[]>([
+    {
+      Filename: 'CMS BID Form',
+      Format: '.xls',
+      Size: 'Maximum file size 2 MB',
+      Attachment: 'Upload file'
+    }
+  ]);
