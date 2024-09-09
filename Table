@@ -1,0 +1,92 @@
+<Accordion defaultExpanded>
+        <AccordionSummary
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+          sx={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }}
+        >
+          <h2 className='reasearch-filters'><ExpandMore fontSize="large" sx={{ marginRight: 1 }} /></h2>
+          <h2 className='reasearch-filters'>Upload files</h2>
+        </AccordionSummary>
+        <AccordionDetails>
+          <div className='ag-theme-alpine' style={{ width: '100%' }}>
+            <TableContainer style={{ border: '1px solid lightGray' }} >
+              <Table aria-label='simple table'>
+                <TableHead>
+                  <TableRow>
+                    {columns.map((column, index) => (
+                      <TableCell key={index} style={{ borderRight: '1px solid lightGray',textAlign:'center' }}>
+                        {column.field}
+                      </TableCell>
+                    ))}
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {rowData.map((row, index) => (
+                    <TableRow key={index}>
+                      {columns.map((column) => (
+                        <TableCell key={column.field} style={{ borderRight: '1px solid lightGray',textAlign:'center' }}>
+                          {column.field === 'Attachment' ? (
+                            row.Attachment === 'Uploaded Successfully' ? (
+                              <p style={{color:'green',display:'flex',gap:'2px',backgroundColor:'lightgreen',padding:'3px',margin:0,display:'inline-flex'}}><CheckCircleOutlinedIcon/>{" "}{row.Attachment}</p>
+                            ) : (
+                              <Button onClick={() => setOpenFileDialog(true)} style={{ textTransform: 'none', textDecoration: 'underline', color: '#035C67' }}>
+                                {row.Attachment}
+                              </Button>
+                            )
+                          ) : row[column.field]}
+                        </TableCell>
+                      ))}
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </div>
+        </AccordionDetails>
+      </Accordion>
+      <Dialog
+        onClose={handleClose}
+        aria-labelledby="customized-dialog-title"
+        open={openfileDialog}
+        maxWidth='xs'
+        fullWidth
+        BackdropProps={{
+          style: {
+            backgroundColor: 'transparent',
+            boxShadow: 'none',
+          },
+        }}
+      >
+        <DialogTitle id="customized-dialog-title" onClose={handleClose} style={{ padding: '1rem 1rem 0 1.5rem', margin: 0 }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <Typography variant="h6" style={{ color: '#035C67', margin: 0 }}><b>Upload files and documents</b></Typography>
+            <IconButton onClick={handleClose} style={{ padding: 0 }}><CloseIcon /></IconButton>
+          </div>
+        </DialogTitle>
+        <DialogContent>
+          <div {...getRootProps()} style={{ textAlign: 'center' }}>
+            <input {...getInputProps()} />
+            <div style={{ border: '1px dashed black', padding: '1.75rem 3rem' }}>
+                Drag and drop files here or <span style={{textDecoration:'underline'}}>choose files</span>
+            </div>
+          </div>
+         
+          {/* <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.7rem', marginTop: '0.5rem' }}>
+            <p style={{ margin: 0 }}>Files supported: CSV, XLSX, XLS</p>
+            <p style={{ margin: 0 }}>Maximum size: 20MB</p>
+          </div> */}
+          {uploadedFiles.length != 0 && <b><p>Uploaded files</p></b>}
+
+          {uploadedFiles.map((file) => (
+            <Card key={file.name} style={{ padding: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><p style={{ margin: 0, display: 'flex', alignItems: 'center' }}><AttachFileIcon style={{ transform: 'rotate(45deg)' }} fontSize='small' />&nbsp;{file.name} </p><CloseIcon onClick={() => setUploadedFiles([])} /></Card>
+          ))}
+        </DialogContent>
+        <DialogActions style={{ display: 'flex', justifyContent: 'center', paddingTop: '1.75rem' }}>
+          <Button autoFocus onClick={handleClose} color="default" variant='outlined' size='small'>
+            Cancel
+          </Button>
+          <Button autoFocus onClick={handleUpload} color="default" variant='outlined' style={uploadButtonStyle} size='small'>
+            Upload
+          </Button>
+        </DialogActions>
+      </Dialog>
