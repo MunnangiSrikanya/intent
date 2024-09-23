@@ -1,0 +1,26 @@
+.fallback-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8d7da;
+  color: #721c24;
+  text-align: center;
+}
+
+.fallback-title {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.fallback-message {
+  font-size: 1.25rem;
+  margin: 1rem 0;
+}
+
+.fallback-link {
+  font-size: 1rem;
+  color: #007bff;
+  text-decoration: underline;
+}
